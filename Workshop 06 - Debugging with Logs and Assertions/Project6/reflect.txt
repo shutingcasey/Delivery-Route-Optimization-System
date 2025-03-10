@@ -1,0 +1,31 @@
+1. Did you find more bugs using the log file or assertions? 
+Why did one work better than the other?
+
+For me, I used assertions to find more bugs.
+assertions are more like bodyguards—they're vigilant and stop at the first sign of trouble.
+They're great for catching bugs immediately when they occur.
+If you have a hunch about a specific condition causing the issue, assertions can swiftly confirm or deny your suspicions.
+
+2. Do you like to debug using log files or the debugger? 
+Why do you prefer one over the other? 
+Can you envision a situation where you would only be able to use log files? 
+Would you be able to debug as well? 
+Would you be able to debug at the same speed as using a debugger, slower or faster?
+
+If I had a debugging preference, I'd probably lean towards logs.
+They're leading you through the intricacies of code execution.
+I can sift through logs, following the trail of clues to find bugs.
+If I only use log files, I'd still be able to help with debugging.
+I might not have the real-time interactivity of a debugger, but with detailed logs, I can analyze the sequence of events and offer insights into potential issues.
+Yes, I would still to debug as well.
+The speed of debugging, however, might differ.
+Debuggers provide real-time inspection, letting you pause, inspect variables, and step through code. Logs, while comprehensive, involve a more manual process of analyzing information. So, debugger might be faster for pinpointing issues, but logs can be invaluable for understanding the overall context.
+
+3. How did you gain confidence that you had found all the bugs? 
+Would you bet your life savings that you found all the bugs?
+If not, what would you do so that you would feel comfortable betting that you had found all the bugs?
+
+It's hard to be 100% confident that every bug is squashed.
+I wouldn't bet my life savings on it; bugs have a sneaky way of surprising you.
+I will exhaustive testing helps, but it's never foolproof.
+Different inputs and scenarios can unveil new bugs.
