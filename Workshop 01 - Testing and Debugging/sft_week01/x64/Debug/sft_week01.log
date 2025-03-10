@@ -1,0 +1,5 @@
+﻿  week01.c
+C:\Users\User\Desktop\SFT 221\Week_01\sft_week01\week01.c(21,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\SFT 221\Week_01\sft_week01\week01.c(40,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\SFT 221\Week_01\sft_week01\week01.c(41,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  sft_week01.vcxproj -> C:\Users\User\Desktop\SFT 221\Week_01\sft_week01\x64\Debug\sft_week01.exe

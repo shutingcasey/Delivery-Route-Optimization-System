@@ -1,0 +1,23 @@
+1.What was the most useful debugger tool you used to find the bugs? Why was it more usefulthan other techniques you tried?
+I used Visual Studio Debugger.
+This tool provides features like step-by-step execution, breakpoints, and variable inspection, making it easier to identify and fix bugs
+
+2. Which debugger features did you NOT use? Why did you not use these features? For each feature you did not use, give an example of a problem you would use it for.
+I didn't use Conditional Breakpoints.
+For intermittent issues or those dependent on specific conditions, conditional breakpoints could be invaluable.
+If a bug is easily reproducible and occurs consistently, I might prefer standard breakpoints.
+
+3. Which do you think is a faster way to find bugs:
+a. Using the debugger alone,
+b. Using print statements alone,
+c. Using the debugger and print statements? Justify your answer.
+
+For me is c. Using the debugger and print statements? Justify your answer.
+Combines the benefits of the debugger's advanced features with the visibility and simplicity of print statements. Allows for real-time inspection and dynamic exploration.
+
+
+4. How did you test the program to find the bugs and to make sure you had fixed the bugs? Did you use any additional test data other than that supplied? If so, describe the techniques you used to create the test data. How confident are you that you found all the bugs?
+
+I used Unit Testing. 
+I create small, isolated tests for individual components or functions to ensure they work as expected.
+I didn't use additional test data.

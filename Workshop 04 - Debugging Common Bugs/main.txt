@@ -1,0 +1,60 @@
+﻿#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#define MAX_FACTORIALS 10000
+#define NUM_FACTS 100
+
+struct FactorialResults
+{
+    double results[MAX_FACTORIALS];
+    int numResults;
+};
+double factorial(const int n)
+{
+    if (n >= 1)
+    {
+        return (n * factorial(n - 1));
+    }
+    else
+    {
+        return 1;
+    }
+}
+double reduceFactorial(const int n)
+{
+    if (n >= 1)
+    {
+        return (n * reduceFactorial(n - 1));
+    }
+    else
+    {
+        return 1;
+    }
+}
+
+void computeFactorials(struct FactorialResults* results, int numFactorials)
+{
+    int i;
+    for (i = 0; i < numFactorials; i++)
+    {
+        results->results[i] = factorial(i);
+    }
+    results->numResults = numFactorials;
+}
+
+int main(void)
+{
+    struct FactorialResults results = { {0}, 0 };
+    int i;
+
+    computeFactorials(&results, NUM_FACTS);
+
+    for (i = 1; i < NUM_FACTS; i++)
+    {
+        results.results[i] = reduceFactorial(i);
+        printf("%5d %-20.0f\n", i, results.results[i]);
+    }
+    return 0;
+}
+
+

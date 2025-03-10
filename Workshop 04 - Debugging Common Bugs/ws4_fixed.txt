@@ -1,0 +1,62 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define MAX_FACTORIALS 10000
+#define NUM_FACTS 30
+
+struct FactorialResults {
+  int results[MAX_FACTORIALS];
+  int numResults;
+};
+int factorial(const int n) {
+  return (n > 0) ? n * factorial(n - 1) : 1;
+}
+int reduceFactorial(const int n) {
+  return (n > 0) ? factorial(n - 1) : 1;
+}
+void computeFactorials(struct FactorialResults* results, int numFactorials) {
+  int i;
+  printf("This is a list from computeFactorials :\n");
+  for (i = 0; i < numFactorials; i++) {
+    results->results[i] = factorial(i);
+    printf("%5d! %12d\n", i, results->results[i]);
+  }
+  results->numResults = numFactorials;
+}
+int main(void) {
+  struct FactorialResults results = {{0}, 0};
+  int i;
+  computeFactorials(&results, NUM_FACTS);
+  printf("This is a list from reduceFactorial :\n");
+  for (i = 0; i < results.numResults; i++) {
+    results.results[i] = reduceFactorial(i);
+    printf("%5d! %12d\n", i, results.results[i]);
+  }
+  return 0;
+}
+
+/*
+ * 16. n <= n: will be wrong, it will be always true
+               changed the condition, if n > 0, 
+               it will calculate the factorial from 1 to n - 1.
+ 
+ * 19. n / n: it will be always 1,
+              so it will not have the result that I want;
+              therefore, I have to change the condition,
+              and can match the result that I want.
+ 
+ * 26. Do not have a printf to print out the result,
+       if not have, then I have no idea what this function does.
+ 
+ * 28. Do not know what the results.numResults means,
+       so I made the function's argument with pointer,
+       then I could use the results->numResults for different block instead of macro
+ 
+ * 36. It should assign a return value from reduceFactorial(i) to results.results[i],
+       not from reduceFactorial(results.results[i]) because I felt it did not have any value inside.
+       Therefore, I will not get any values to assign to results.results[i]
+ 
+ * 37. %12f: It could not be %12f, and it should be %12d because we used integer for the function and
+             one of members from the struct FactorialResults.
+             However, if we change the type from integer to double,
+             then the format can be still.
+ */
